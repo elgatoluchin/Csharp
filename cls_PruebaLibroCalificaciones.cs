@@ -1,30 +1,19 @@
 ﻿using System;
-
+//El Constructor libroCalificaciones se utiliza para especificar el nombre del curso cada vez que se crea un objeto LibroCalificaciones 
 public class cls_PruebaLibroCalificaciones{
-
+    //Metodo que comienza la ejecucion del programa
     public static void Main(String [] args){
 
-        //el argumento CS101 Introduccion a la programacion en C#
-        //Se pasa al constructor del objeto y se utiliza para inicializar nombreCurso
-        //Esta instruccion requiere que la clase proporcione un contructor con un parametro string
-        LibroCalificaciones miLibroCalificaciones = new LibroCalificaciones("CS101 Introduccion a la programacion en C#");
+        //Crea el objeto LibroCalificaciones
 
-        Console.WriteLine("El nombre del curso es: {0}", miLibroCalificaciones.NombreCurso);
+        LibroCalificaciones libroCalificaciones1 = new LibroCalificaciones("CS101 Introduccion a la programacion C#");//Invoca al constructor
 
-        Console.WriteLine("Escriba el nombre del curso: ");
-        string elNombre = Console.ReadLine();
+        LibroCalificaciones libroCalificaciones2 = new LibroCalificaciones("CS102 Estructuras de datos en C#");//Invoca al constructor
 
-        //el objeto de tipo miLibroCalificaciones
-        //Hace referencia a la propiedad de objeto LibroCalificaciones
-        //y envia el valor a la porpiedad NombreCurso 
-        miLibroCalificaciones.NombreCurso = elNombre;
+        //Muestra el valor inicial del curso para cada LibroCalificaciones
+        Console.WriteLine("El nombre del curso de librocalificaciones1 es: {0}", libroCalificaciones1.NombreCurso);
 
-        //Mostramos los valores del metodo MostrarMensaje
-        //del objeto miLibroCalificaiones que representa 
-        // al objeto LibroCalificaciones que esta en memoria 
-        miLibroCalificaciones.MostrarMensaje();
-
+        Console.WriteLine("El nombre del curso de librocalificaciones2 es: {0}", libroCalificaciones2.NombreCurso);
 
     }//Fin del metodo
-
 }//Fin de la Clase
